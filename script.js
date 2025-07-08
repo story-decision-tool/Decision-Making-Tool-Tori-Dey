@@ -151,8 +151,7 @@ function populateDropdowns(lang) {
 }
 
 function setLanguage(lang) {
-  const oppositeLang = lang === "en" ? "fr" : "en";
-  populateDropdowns(oppositeLang);
+  populateDropdowns(lang);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -179,7 +178,7 @@ document.getElementById("storyForm").addEventListener("submit", function(e) {
 });
 
 function getStoryType(data) {
-  if (data.topic.includes("impact")) return "Impact Story";
+  if (data.topic.includes("impact") || data.topic.includes("impact story")) return "Impact Story";
   if (data.topic.includes("process")) return "Process Story";
   if (data.topic.includes("narrative")) return "Narrative Story";
   if (data.topic.includes("creative")) return "Creative Story";
