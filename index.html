@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>eBASE Story Decision Tool</title>
+  <title>Decision Making Tool for Story</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
   <div class="container">
-  <img src="compass.png" alt="eBASE Compass" style="max-width: 100%; border-radius: 10px; margin-bottom: 1rem;" />
+    <img src="compass.png" alt="eBASE Compass" style="max-width: 100%; border-radius: 10px; margin-bottom: 1rem;" />
     <header>
-      <h1 data-i18n="title">eBASE Story Decision Tool</h1>
+      <h1 data-i18n="title">Decision Making Tool for Story</h1>
       <div class="lang-toggle">
         <button onclick="setLanguage('en')">English</button>
         <button onclick="setLanguage('fr')">Français</button>
@@ -21,100 +21,49 @@
 
     <form id="storyForm">
       <div class="form-group">
+        <label>Email address:</label>
+        <input type="email" name="email" required placeholder="Enter your email" />
+        <input type="hidden" name="_autoresponse" value="Thank you for submitting your story preferences! We will reach out to you shortly." />
+      </div>
+
+      <div class="form-group">
         <label data-i18n="question1">Who is your target audience?</label>
-        <select name="audience">
-          <option value="">No Response</option>
-          <option>Policymakers</option>
-          <option>Practitioners</option>
-          <option>People</option>
-          <option>Researchers</option>
-          <option>Donors/Funders/Deve agencies</option>
-        </select>
+        <select name="audience" data-i18n-select="audience"></select>
       </div>
 
       <div class="form-group">
         <label data-i18n="question2">What do you want the story to be about?</label>
-        <select name="topic">
-          <option value="">No Response</option>
-          <option>Process</option>
-          <option>Narrative</option>
-          <option>Impact</option>
-          <option>Creative</option>
-        </select>
+        <select name="topic" data-i18n-select="topic"></select>
       </div>
 
       <div class="form-group">
         <label data-i18n="question3">What message do you want to convey?</label>
-        <select name="message">
-          <option value="">No Response</option>
-          <option>Evidence is complex</option>
-          <option>Results for decisions</option>
-          <option>Impact lives</option>
-          <option>Policy evidence</option>
-          <option>Practice evidence</option>
-          <option>People evidence</option>
-        </select>
+        <select name="message" data-i18n-select="message"></select>
       </div>
 
       <div class="form-group">
         <label data-i18n="question4">Why do you want to tell this story?</label>
-        <select name="why">
-          <option value="">No Response</option>
-          <option>Improve knowledge</option>
-          <option>Change behavior</option>
-          <option>Stimulate investment</option>
-          <option>Community engagement</option>
-          <option>Change workplace culture</option>
-        </select>
+        <select name="why" data-i18n-select="why"></select>
       </div>
 
       <div class="form-group">
         <label data-i18n="question5">How do you want to tell this story?</label>
-        <select name="how">
-          <option value="">No Response</option>
-          <option>Online</option>
-          <option>Television</option>
-          <option>Radio</option>
-          <option>In-person</option>
-          <option>On stage</option>
-        </select>
+        <select name="how" data-i18n-select="how"></select>
       </div>
 
       <div class="form-group">
         <label data-i18n="question6">When do you want to tell this story?</label>
-        <select name="when">
-          <option value="">No Response</option>
-          <option>Today</option>
-          <option>Within a month</option>
-          <option>Within 6 months</option>
-          <option>Within 12 months</option>
-        </select>
+        <select name="when" data-i18n-select="when"></select>
       </div>
 
       <div class="form-group">
         <label data-i18n="question7">Any events or seasons you are targeting?</label>
-        <select name="season">
-          <option value="">No Response</option>
-          <option>Harvest season</option>
-          <option>Rainy season</option>
-          <option>Winter</option>
-          <option>Summer</option>
-          <option>After school exams</option>
-        </select>
+        <select name="season" data-i18n-select="season"></select>
       </div>
 
       <div class="form-group">
         <label data-i18n="question8">Where do you want to tell this story?</label>
-        <select name="where">
-          <option value="">No Response</option>
-          <option>City hall</option>
-          <option>Village Square</option>
-          <option>Market place</option>
-          <option>Parliament building</option>
-          <option>School</option>
-          <option>Church</option>
-          <option>Conference</option>
-        </select>
+        <select name="where" data-i18n-select="where"></select>
       </div>
 
       <button type="submit" data-i18n="submit">Submit</button>
